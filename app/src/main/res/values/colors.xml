@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- _________Original colors_____________
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    -->
+    <color name="colorPrimary">#1a237e</color>
+    <color name="colorPrimaryDark">#000051</color>
+    <color name="colorPrimaryLight">#534bae</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorSecondary">#536dfe</color>
+    <color name="colorSecondaryLight">#8f9bff</color>
+    <color name="colorSecondaryDark">#0043ca</color>
+    <color name="colorPrimaryText">#ffffff</color>
+    <color name="colorSecondaryText">#000000</color>
+
+    <!--These are colors copied from Material Color Tool -->
+    <color name="primaryColor">#1a237e</color>
+    <color name="primaryLightColor">#534bae</color>
+    <color name="primaryDarkColor">#000051</color>
+    <color name="secondaryColor">#536dfe</color>
+    <color name="secondaryLightColor">#8f9bff</color>
+    <color name="secondaryDarkColor">#0043ca</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#000000</color>
 </resources>
