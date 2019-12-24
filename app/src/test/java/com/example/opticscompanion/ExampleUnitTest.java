@@ -1,4 +1,4 @@
-package com.example.opticsassistant;
+package com.example.opticscompanion;
 
 import org.junit.Test;
 

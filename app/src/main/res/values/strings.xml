@@ -1,5 +1,21 @@
 <resources>
-    <string name="app_name">Optics Assistant</string>
-    <string name="sample_text_material_button">Material Button Test</string>
-    <string name="sample_text_material_cancel_button">Cancel Button Test</string>
+    <string name="app_name">Optics Companion</string>
+    <string name="button_text_lens_button">Lens Parameters</string>
+    <string name="button_text_process_button">Process Parameters</string>
+    <string name="button_text_zygo_button">Zygo Reference Spheres</string>
+    <string name="button_text_reference_button">General Reference</string>
+    <string name="button_text_sag_button">Sag</string>
+    <string name="button_text_radius_button">Radius</string>
+    <string name="button_text_diameter_button">Diameter</string>
+    <string name="label_radius">Radius</string>
+    <string name="label_diamter">Diameter</string>
+    <string name="label_sag">Sag</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_text_calculate_button">Calculate</string>
+    <string name="hint_enter_radius">Enter radius</string>
+    <string name="hint_enter_diameter">Enter diameter</string>
+
+
 </resources>
