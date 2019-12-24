@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="@string/label_diamter"
+        android:text="@string/label_diameter"
         app:layout_constraintBaseline_toBaselineOf="@+id/operandValue2"
         app:layout_constraintEnd_toStartOf="@+id/operandValue2"
         app:layout_constraintHorizontal_bias="0.5"
@@ -84,8 +84,8 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        style="@style/resultText"
         android:id="@+id/resultLabel"
+        style="@style/resultText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_text_sag_button"
@@ -96,6 +96,18 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sag Fragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultLabel"
+        app:layout_constraintVertical_bias=".8" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

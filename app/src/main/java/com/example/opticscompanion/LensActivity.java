@@ -27,4 +27,9 @@ public class LensActivity extends AppCompatActivity {
         Fragment sagFragment = new SagFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, sagFragment).commit();
     }
+
+    public void clickDiameterButton(View view){
+        Fragment diameterFragment = new DiameterFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, diameterFragment).commit();
+    }
 }
