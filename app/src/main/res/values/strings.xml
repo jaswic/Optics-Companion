@@ -17,6 +17,14 @@
     <string name="hint_enter_radius">Enter radius</string>
     <string name="hint_enter_diameter">Enter diameter</string>
     <string name="hint_enter_sag">Enter sag</string>
+    <string name="button_text_speed_button">Cutting Speed</string>
+    <string name="button_text_rpm_button">Tool RPM</string>
+    <string name="button_text_tool_diameter_button">Tool Diameter</string>
+    <string name="hint_enter_tool_diameter">Enter Tool Diameter</string>
+    <string name="hint_enter_cutting_speed">Enter Cutting Speed</string>
+    <string name="string_tool_diameter">Tool Diameter</string>
+    <string name="label_cutting_speed">Cutting Speed</string>
+    <string name="label_rpm">Tool RPM</string>
 
 
 </resources>

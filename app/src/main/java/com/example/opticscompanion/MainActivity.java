@@ -18,4 +18,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LensActivity.class);
         startActivity(intent);
     }
+
+    public void chooseProcessActivity(View v){
+        Intent intent = new Intent(this, ProcessActivity.class);
+        startActivity(intent);
+    }
 }

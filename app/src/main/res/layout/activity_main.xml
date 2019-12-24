@@ -25,6 +25,7 @@
         style="@style/ButtonTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="chooseProcessActivity"
         android:text="@string/button_text_process_button"
         app:layout_constraintBottom_toTopOf="@+id/chooseZygoButton"
         app:layout_constraintEnd_toEndOf="parent"
