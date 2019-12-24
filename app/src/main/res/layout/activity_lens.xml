@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
+        android:onClick="clickSagButton"
         android:text="@string/button_text_sag_button"
         app:layout_constraintEnd_toStartOf="@+id/radiusButton"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,19 +38,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:onClick="clickRadiusButton"
         android:text="@string/button_text_radius_button"
         app:layout_constraintEnd_toStartOf="@+id/diameterButton"
         app:layout_constraintStart_toEndOf="@+id/sagButton"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <fragment
+    <FrameLayout
         android:id="@+id/fragment_container"
-        android:name="com.example.opticscompanion.SagFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radiusButton" />
