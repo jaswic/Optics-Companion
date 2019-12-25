@@ -22,6 +22,7 @@ public class RpmFragment extends Fragment {
           final EditText speedText = view.findViewById(R.id.operandValue2);
           final Button calculateButton = view.findViewById(R.id.calculateButton);
           final TextView result = view.findViewById(R.id.resultText);
+          final TextView resultLabel = view.findViewById(R.id.resultLabel);
 
         calculateButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -32,6 +33,7 @@ public class RpmFragment extends Fragment {
 
                 rpm = ProcessFunctions.calculateRPM(diameter, speed);
                 result.setText(String.format("%,.3f", rpm));
+                resultLabel.setVisibility(View.VISIBLE);
 
             }
         });

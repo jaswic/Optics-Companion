@@ -25,6 +25,7 @@
     <string name="string_tool_diameter">Tool Diameter</string>
     <string name="label_cutting_speed">Cutting Speed</string>
     <string name="label_rpm">Tool RPM</string>
+    <string name="hint_enter_tool_rpm">Enter Tool RPM</string>
 
 
 </resources>

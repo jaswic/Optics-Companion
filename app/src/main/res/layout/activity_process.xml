@@ -7,10 +7,12 @@
     tools:context="com.example.opticscompanion.ProcessActivity">
 
     <Button
+        style="@style/ButtonTheme"
         android:id="@+id/speedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:onClick="clickCuttingSpeedButton"
         android:text="@string/button_text_speed_button"
         app:layout_constraintEnd_toStartOf="@+id/rpmButton"
         app:layout_constraintHorizontal_bias="0.5"
@@ -18,10 +20,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        style="@style/ButtonTheme"
         android:id="@+id/rpmButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:onClick="clickRpmButton"
         android:text="@string/button_text_rpm_button"
         app:layout_constraintEnd_toStartOf="@+id/minDiameterButton"
         app:layout_constraintHorizontal_bias="0.5"
@@ -29,10 +33,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        style="@style/ButtonTheme"
         android:id="@+id/minDiameterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:onClick="clickDiameterButton"
         android:text="@string/button_text_tool_diameter_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
