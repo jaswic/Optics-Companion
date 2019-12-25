@@ -22,6 +22,7 @@ public class RadiusFragment extends Fragment {
         final EditText sagText= view.findViewById(R.id.operandValue2);
         Button calculateButton = view.findViewById(R.id.calculateButton);
         final TextView result = view.findViewById(R.id.resultText);
+        final TextView resultLabel = view.findViewById(R.id.resultLabel);
 
         calculateButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -32,6 +33,7 @@ public class RadiusFragment extends Fragment {
 
                 radius = Lens.calculateRadius(sag, diameter);
                 result.setText(String.format("%,.3f", radius));
+                resultLabel.setVisibility(View.VISIBLE);
 
             }
         });

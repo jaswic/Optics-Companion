@@ -32,7 +32,7 @@ public class RpmFragment extends Fragment {
                 speed = Double.parseDouble(speedText.getText().toString());
 
                 rpm = ProcessFunctions.calculateRPM(diameter, speed);
-                result.setText(String.format("%,.3f", rpm));
+                result.setText(String.format("%,.1f", rpm));
                 resultLabel.setVisibility(View.VISIBLE);
 
             }

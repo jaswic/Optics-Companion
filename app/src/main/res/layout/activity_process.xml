@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        style="@style/ButtonTheme"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:id="@+id/minDiameterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
