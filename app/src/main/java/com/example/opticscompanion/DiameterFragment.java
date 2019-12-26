@@ -2,12 +2,15 @@ package com.example.opticscompanion;
 
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
+import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -25,16 +28,21 @@ public class DiameterFragment extends Fragment {
         final TextView resultLabel = view.findViewById(R.id.resultLabel);
 
         calculateButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
+            public void onClick(View v) {
                 double diameter, radius, sag;
 
-                sag = Double.parseDouble(sagText.getText().toString());
-                radius = Double.parseDouble(radiusText.getText().toString());
+                if (TextUtils.isEmpty(sagText.getText()) || TextUtils.isEmpty(radiusText.getText())) {
+                    Toast toast = Toast.makeText(getActivity(), "Must enter a value", Toast.LENGTH_LONG);
+                    toast.show();
+                } else {
 
-                diameter = Lens.calculateDiameter(radius, sag);
-                result.setText(String.format("%,.3f", diameter));
-                resultLabel.setVisibility(View.VISIBLE);
+                    sag = Double.parseDouble(sagText.getText().toString());
+                    radius = Double.parseDouble(radiusText.getText().toString());
 
+                    diameter = Lens.calculateDiameter(radius, sag);
+                    result.setText(String.format("%,.3f", diameter));
+                    resultLabel.setVisibility(View.VISIBLE);
+                }
             }
         });
 

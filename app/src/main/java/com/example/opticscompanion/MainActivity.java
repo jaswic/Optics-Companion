@@ -23,4 +23,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ProcessActivity.class);
         startActivity(intent);
     }
+
+    public void chooseZygoActivity(View v){
+        Intent intent = new Intent(this, ZygoActivity.class);
+        startActivity(intent);
+    }
 }

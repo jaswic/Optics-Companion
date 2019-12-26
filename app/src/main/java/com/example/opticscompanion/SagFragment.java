@@ -5,12 +5,14 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SagFragment extends Fragment {
 
@@ -26,16 +28,22 @@ public class SagFragment extends Fragment {
         final TextView resultLabel = view.findViewById(R.id.resultLabel);
 
         calculateButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
+            public void onClick(View v) {
                 double diameter, radius, sag;
 
-                diameter = Double.parseDouble(diameterText.getText().toString());
-                radius = Double.parseDouble(radiusText.getText().toString());
 
-                sag = Lens.calculateSag(radius, diameter);
-                result.setText(String.format("%,.3f", sag));
-                resultLabel.setVisibility(View.VISIBLE);
+                if (TextUtils.isEmpty(diameterText.getText()) || TextUtils.isEmpty(radiusText.getText())) {
+                    Toast toast = Toast.makeText(getActivity(), "Must enter a value", Toast.LENGTH_SHORT);
+                    toast.show();
+                } else {
+                    diameter = Double.parseDouble(diameterText.getText().toString());
+                    radius = Double.parseDouble(radiusText.getText().toString());
 
+                    sag = Lens.calculateSag(radius, diameter);
+                    result.setText(String.format("%,.3f", sag));
+                    resultLabel.setVisibility(View.VISIBLE);
+
+                }
             }
         });
 

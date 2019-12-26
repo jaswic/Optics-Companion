@@ -2,12 +2,14 @@ package com.example.opticscompanion;
 
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -28,12 +30,17 @@ public class RadiusFragment extends Fragment {
             public void onClick(View v){
                 double diameter, radius, sag;
 
-                diameter = Double.parseDouble(diameterText.getText().toString());
-                sag = Double.parseDouble(sagText.getText().toString());
 
-                radius = Lens.calculateRadius(sag, diameter);
-                result.setText(String.format("%,.3f", radius));
-                resultLabel.setVisibility(View.VISIBLE);
+                if(TextUtils.isEmpty(diameterText.getText()) || TextUtils.isEmpty(sagText.getText())) {
+                    Toast toast = Toast.makeText(getActivity(), "Must enter a value", Toast.LENGTH_SHORT);
+                    toast.show();
+                } else {
+                    diameter = Double.parseDouble(diameterText.getText().toString());
+                    sag = Double.parseDouble(sagText.getText().toString());
+                    radius = Lens.calculateRadius(sag, diameter);
+                    result.setText(String.format("%,.3f", radius));
+                    resultLabel.setVisibility(View.VISIBLE);
+                }
 
             }
         });
