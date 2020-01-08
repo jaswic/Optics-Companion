@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSurface">@color/colorSurface</item>
     </style>
 
     <style name="ButtonTheme" parent="Widget.MaterialComponents.Button">
@@ -16,6 +17,18 @@
     <style name="resultText" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LargeGreyText">
+        <item name="android:textColor">#888888</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SmallGreyText">
+        <item name="android:textColor">#888888</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">normal</item>
     </style>
 
 </resources>
