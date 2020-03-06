@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ZygoActivity"></activity>
         <activity android:name=".ProcessActivity" />
+        <activity android:name=".LensActivity_Nav" />
         <activity android:name=".LensActivity" />
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".MainActivity_Nav">
