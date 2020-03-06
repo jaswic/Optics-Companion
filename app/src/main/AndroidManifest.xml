@@ -13,7 +13,7 @@
         <activity android:name=".ProcessActivity" />
         <activity android:name=".LensActivity_Nav" />
         <activity android:name=".LensActivity" />
-        <activity android:name=".MainActivity"></activity>
+
         <activity android:name=".MainActivity_Nav">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

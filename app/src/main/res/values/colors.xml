@@ -27,7 +27,7 @@
 
     <!--Colors for the sphere results page
     <color name="colorSurface">#FAF5DE</color>-->
-    <color name="colorSurface">#1a237e</color>
+    <color name="colorSurface">#EEEEEE</color>
     <color name="card_yellow">#FFbb00</color>
     <color name="card_green">#00AA00</color>
     <color name="card_red">#AA0000</color>

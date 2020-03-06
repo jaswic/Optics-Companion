@@ -62,7 +62,7 @@ public class LensActivity_Nav extends AppCompatActivity implements NavigationVie
 
         switch (id) {
             case R.id.nav_spheres:
-                intent = new Intent(this, LensActivity.class);
+                intent = new Intent(this, LensActivity_Nav.class);
                 break;
             case R.id.nav_centering:
                 fragment = new CenteringFragment();
