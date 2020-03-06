@@ -6,13 +6,17 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import androidx.appcompat.widget.Toolbar;
 
 public class LensActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lens);
+        setContentView(R.layout.activity_lens_navigation);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         Fragment fragment = new SagFragment();
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, fragment).commit();

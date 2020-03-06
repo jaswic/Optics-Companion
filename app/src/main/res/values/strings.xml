@@ -31,6 +31,12 @@
     <string name="shape_concave">Concave</string>
     <string name="button_text_find_sphere">Find Zygo Sphere</string>
     <string name="shape_convex">Convex</string>
+    <string name="nav_spheres">Sphere Calculations</string>
+    <string name="nav_zygo">Select Zygo Spheres</string>
+    <string name="nav_process">Process Parameters</string>
+    <string name="nav_centering">Centering</string>
+    <string name="nav_open_drawer">Open Drawer</string>
+    <string name="nav_close_drawer">Close Drawer</string>
 
 
 </resources>

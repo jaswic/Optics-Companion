@@ -7,6 +7,9 @@
     android:importantForAutofill="noExcludeDescendants"
     tools:context="com.example.opticscompanion.LensActivity">
 
+    <include
+        layout="@layout/toolbar_main"
+        android:id="@+id/toolbar" />
 
     <Button
         android:id="@+id/sagButton"
