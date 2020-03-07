@@ -1,5 +1,8 @@
 <resources>
+    <!-- App related strings -->
     <string name="app_name">Optics Companion</string>
+
+    <!-- Button Text Strings -->
     <string name="button_text_lens_button">Lens Parameters</string>
     <string name="button_text_process_button">Process Parameters</string>
     <string name="button_text_zygo_button">Zygo Reference Spheres</string>
@@ -7,30 +10,35 @@
     <string name="button_text_sag_button">Sag</string>
     <string name="button_text_radius_button">Radius</string>
     <string name="button_text_diameter_button">Diameter</string>
-    <string name="label_radius">Radius</string>
-    <string name="label_diameter">Diameter</string>
-    <string name="label_sag">Sag</string>
-    <string name="radio_convex">Convex</string>>
-    <string name="radio_concave">Concave</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="button_text_calculate_button">Calculate</string>
+    <string name="button_text_speed_button">Cutting Spd</string>
+    <string name="button_text_rpm_button">Tool RPM</string>
+    <string name="button_text_tool_diameter_button">Tool Dia</string>
+    <string name="button_text_find_sphere">Find Zygo Sphere</string>
+    <string name="string_tool_diameter">Tool Diameter</string>
+
+    <!-- Hint Text -->
     <string name="hint_enter_radius">Enter radius</string>
     <string name="hint_enter_diameter">Enter diameter</string>
     <string name="hint_enter_sag">Enter sag</string>
-    <string name="button_text_speed_button">Cutting Speed</string>
-    <string name="button_text_rpm_button">Tool RPM</string>
-    <string name="button_text_tool_diameter_button">Tool Diameter</string>
     <string name="hint_enter_tool_diameter">Enter Tool Diameter</string>
     <string name="hint_enter_cutting_speed">Enter Cutting Speed</string>
-    <string name="string_tool_diameter">Tool Diameter</string>
-    <string name="label_cutting_speed">Cutting Speed</string>
-    <string name="label_rpm">Tool RPM</string>
     <string name="hint_enter_tool_rpm">Enter Tool RPM</string>
+
+    <!-- Label Text -->
+    <string name="label_radius">Radius</string>
+    <string name="label_result_diameter">Diameter</string>
+    <string name="label_sag">Sag</string>
+    <string name="label_result_cutting_speed">Cutting Speed</string>
+    <string name="label_rpm">Tool RPM</string>
+
+    <!-- Radio Buttons -->
+    <string name="radio_convex">Convex</string>>
+    <string name="radio_concave">Concave</string>
     <string name="shape_concave">Concave</string>
-    <string name="button_text_find_sphere">Find Zygo Sphere</string>
     <string name="shape_convex">Convex</string>
+
+    <!-- Menu Strings -->
     <string name="nav_spheres">Sphere Calculations</string>
     <string name="nav_zygo">Select Zygo Spheres</string>
     <string name="nav_process">Process Parameters</string>
@@ -38,5 +46,7 @@
     <string name="nav_open_drawer">Open Drawer</string>
     <string name="nav_close_drawer">Close Drawer</string>
 
+    <!-- String Defaults -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

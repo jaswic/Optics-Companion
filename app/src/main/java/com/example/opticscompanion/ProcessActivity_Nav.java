@@ -15,12 +15,12 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class LensActivity_Nav extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class ProcessActivity_Nav extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lens_navigation);
+        setContentView(R.layout.activity_process_navigation);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -35,23 +35,23 @@ public class LensActivity_Nav extends AppCompatActivity implements NavigationVie
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Fragment fragment = new SagFragment();
+        //Set first fragment to display
+        Fragment fragment = new RpmFragment();
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, fragment).commit();
     }
 
-    public void clickRadiusButton(View view){
-        Fragment radiusFragment = new RadiusFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, radiusFragment).commit();
-    }
-
-    public void clickSagButton(View view){
-        Fragment sagFragment = new SagFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, sagFragment).commit();
-    }
-
     public void clickDiameterButton(View view){
-        Fragment diameterFragment = new DiameterFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, diameterFragment).commit();
+
+    }
+
+    public void clickCuttingSpeedButton(View view){
+        Fragment fragment = new CuttingSpeedFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+    }
+
+    public void clickRpmButton(View view){
+        Fragment fragment = new RpmFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
     }
 
     @Override
