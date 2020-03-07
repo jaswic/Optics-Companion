@@ -18,7 +18,7 @@
 
     <EditText
         android:id="@+id/operandValue1"
-        android:layout_width="250dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/hint_enter_sag"
         android:inputType="number|numberDecimal|numberSigned"
@@ -37,7 +37,7 @@
 
     <EditText
         android:id="@+id/operandValue2"
-        android:layout_width="250dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:hint="@string/hint_enter_diameter"

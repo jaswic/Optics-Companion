@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ZygoActivity"></activity>
+        <activity android:name=".ZygoActivity_Nav"></activity>
         <activity android:name=".ProcessActivity" />
         <activity android:name=".ProcessActivity_Nav" />
         <activity android:name=".LensActivity_Nav">
