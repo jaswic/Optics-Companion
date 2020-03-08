@@ -9,21 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ZygoActivity"></activity>
-        <activity android:name=".ZygoActivity_Nav"></activity>
+        <activity android:name=".CenteringActivity_Nav"></activity>
+        <activity android:name=".ZygoActivity" />
+        <activity android:name=".ZygoActivity_Nav" />
         <activity android:name=".ProcessActivity" />
         <activity android:name=".ProcessActivity_Nav" />
         <activity android:name=".LensActivity_Nav">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".LensActivity" />
-        <activity android:name=".MainActivity_Nav">
-
-
-        </activity>
+        <activity android:name=".MainActivity_Nav"></activity>
     </application>
 
 </manifest>

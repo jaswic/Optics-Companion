@@ -65,7 +65,7 @@ public class ProcessActivity_Nav extends AppCompatActivity implements Navigation
                 intent = new Intent(this, LensActivity_Nav.class);
                 break;
             case R.id.nav_centering:
-                fragment = new CenteringFragment();
+                intent = new Intent(this, CenteringActivity_Nav.class);
                 break;
             case R.id.nav_zygo:
                 intent = new Intent(this, ZygoActivity_Nav.class);

@@ -1,10 +1,5 @@
 package com.example.opticscompanion;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -13,14 +8,18 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import com.google.android.material.navigation.NavigationView;
 
-public class LensActivity_Nav extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class CenteringActivity_Nav extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lens_navigation);
+        setContentView(R.layout.activity_centering_navigation);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -34,24 +33,6 @@ public class LensActivity_Nav extends AppCompatActivity implements NavigationVie
         //Set the activity to be a listener for menu item selection
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        Fragment fragment = new SagFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, fragment).commit();
-    }
-
-    public void clickRadiusButton(View view){
-        Fragment radiusFragment = new RadiusFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, radiusFragment).commit();
-    }
-
-    public void clickSagButton(View view){
-        Fragment sagFragment = new SagFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, sagFragment).commit();
-    }
-
-    public void clickDiameterButton(View view){
-        Fragment diameterFragment = new DiameterFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, diameterFragment).commit();
     }
 
     @Override

@@ -24,6 +24,11 @@
     <string name="hint_enter_tool_diameter">Enter Tool Diameter</string>
     <string name="hint_enter_cutting_speed">Enter Cutting Speed</string>
     <string name="hint_enter_tool_rpm">Enter Tool RPM</string>
+    <string name="hint_upper_bell_diameter">Diameter of upper bell</string>
+    <string name="hint_lower_bell_diameter">Diameter of lower bell</string>
+    <string name="hint_upper_radius">Enter the upper radius</string>
+    <string name="hint_center_thickness">Enter the center thickness</string>
+    <string name="hint_lower_radius">Enter the lower radius</string>
 
     <!-- Label Text -->
     <string name="label_radius">Radius</string>
@@ -31,6 +36,12 @@
     <string name="label_sag">Sag</string>
     <string name="label_result_cutting_speed">Cutting Speed</string>
     <string name="label_rpm">Tool RPM</string>
+    <string name="label_lens_shape_spinner">Lens Shape</string>
+    <string name="label_upper_bell_diameter">Upper Bell</string>
+    <string name="label_lower_bell_diameter">Lower Bell</string>
+    <string name="label_upper_radius">Upper Radius</string>
+    <string name="label_lower_radius">Lower Radius</string>
+    <string name="label_ct">CT</string>
 
     <!-- Radio Buttons -->
     <string name="radio_convex">Convex</string>>
@@ -46,7 +57,20 @@
     <string name="nav_open_drawer">Open Drawer</string>
     <string name="nav_close_drawer">Close Drawer</string>
 
+    <!-- Lens shapes for centering -->
+    <string-array name="shapes">
+        <item>Convex - Plano</item>
+        <item>Plano - Convex</item>
+        <item>Concave - Plano</item>
+        <item>Plano - Concave</item>
+        <item>Biconvex</item>
+        <item>Biconcave</item>
+        <item>Concave - Convex</item>
+        <item>Convex - Concave</item>
+    </string-array>
+
     <!-- String Defaults -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>
