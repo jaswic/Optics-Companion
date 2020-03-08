@@ -13,7 +13,7 @@
         tools:context=".CenteringActivity_Nav">
 
         <include
-            android:id="@+id/include"
+            android:id="@+id/toolbar"
             layout="@layout/toolbar_main" />
 
         <TextView
@@ -40,7 +40,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_weight="7"
             app:layout_constraintStart_toEndOf="@+id/labelShapeSpinner"
-            app:layout_constraintTop_toBottomOf="@+id/include" />
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
         <View
             android:layout_width="wrap_content"
@@ -213,13 +213,13 @@
             app:layout_constraintTop_toBottomOf="@+id/lowerBellDiameter" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonCalculateCentering"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="Button"
+            android:text="@string/button_text_calculate_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lowerRadiusEditText" />
@@ -251,7 +251,7 @@
             android:background="@drawable/gradient_bar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonCalculateCentering" />
 
         <View
             android:id="@+id/centeringArrow"
