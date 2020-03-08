@@ -1,4 +1,4 @@
-package com.example.opticscompanion;
+package com.example.opticscompanion.Adapters;
 
 public class SphereViewModel {
     private String sphereName;

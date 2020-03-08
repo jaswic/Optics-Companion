@@ -1,12 +1,16 @@
-package com.example.opticscompanion;
+package com.example.opticscompanion.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import androidx.appcompat.widget.Toolbar;
+
+import com.example.opticscompanion.Fragments.DiameterFragment;
+import com.example.opticscompanion.Fragments.RadiusFragment;
+import com.example.opticscompanion.Fragments.SagFragment;
+import com.example.opticscompanion.R;
 
 public class LensActivity extends AppCompatActivity {
 

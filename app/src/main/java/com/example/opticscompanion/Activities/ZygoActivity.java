@@ -1,4 +1,4 @@
-package com.example.opticscompanion;
+package com.example.opticscompanion.Activities;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -11,6 +11,11 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.opticscompanion.R;
+import com.example.opticscompanion.Adapters.RecyclerAdapter;
+import com.example.opticscompanion.Adapters.SphereViewModel;
+import com.example.opticscompanion.Utils.ZygoSphere;
 
 import java.io.BufferedReader;
 import java.io.IOException;

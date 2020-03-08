@@ -1,9 +1,4 @@
-package com.example.opticscompanion;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
+package com.example.opticscompanion.Activities;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,14 +8,20 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+
+import com.example.opticscompanion.Fragments.EntryFragment;
+import com.example.opticscompanion.R;
 import com.google.android.material.navigation.NavigationView;
 
-public class ProcessActivity_Nav extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
+public class CenteringActivity_Nav extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_process_navigation);
+        setContentView(R.layout.activity_centering_navigation);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -34,24 +35,6 @@ public class ProcessActivity_Nav extends AppCompatActivity implements Navigation
         //Set the activity to be a listener for menu item selection
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        //Set first fragment to display
-        Fragment fragment = new RpmFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, fragment).commit();
-    }
-
-    public void clickDiameterButton(View view){
-
-    }
-
-    public void clickCuttingSpeedButton(View view){
-        Fragment fragment = new CuttingSpeedFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
-    }
-
-    public void clickRpmButton(View view){
-        Fragment fragment = new RpmFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
     }
 
     @Override

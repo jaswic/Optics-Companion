@@ -1,4 +1,4 @@
-package com.example.opticscompanion;
+package com.example.opticscompanion.Fragments;
 
 
 import android.os.Bundle;
@@ -10,6 +10,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+
+import com.example.opticscompanion.Utils.ProcessFunctions;
+import com.example.opticscompanion.R;
 
 public class RpmFragment extends Fragment {
 

@@ -1,4 +1,4 @@
-package com.example.opticscompanion;
+package com.example.opticscompanion.Activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -20,6 +20,11 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.opticscompanion.Fragments.EntryFragment;
+import com.example.opticscompanion.R;
+import com.example.opticscompanion.Adapters.RecyclerAdapter;
+import com.example.opticscompanion.Adapters.SphereViewModel;
+import com.example.opticscompanion.Utils.ZygoSphere;
 import com.google.android.material.navigation.NavigationView;
 
 import java.io.BufferedReader;

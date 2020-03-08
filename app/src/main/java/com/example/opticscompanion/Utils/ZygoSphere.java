@@ -1,4 +1,4 @@
-package com.example.opticscompanion;
+package com.example.opticscompanion.Utils;
 
 import java.util.ArrayList;
 import java.util.List;

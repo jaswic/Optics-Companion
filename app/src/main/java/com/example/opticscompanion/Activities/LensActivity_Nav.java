@@ -1,12 +1,10 @@
-package com.example.opticscompanion;
+package com.example.opticscompanion.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
-
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -15,17 +13,21 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.opticscompanion.Fragments.DiameterFragment;
+import com.example.opticscompanion.Fragments.EntryFragment;
+import com.example.opticscompanion.R;
+import com.example.opticscompanion.Fragments.RadiusFragment;
+import com.example.opticscompanion.Fragments.SagFragment;
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity_Nav extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class LensActivity_Nav extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_navigation);
+        setContentView(R.layout.activity_lens_navigation);
 
-
-        Toolbar toolbar = findViewById(R.id.toobar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         //Add drawer menu icon and drawer toggle to appbar
@@ -38,11 +40,23 @@ public class MainActivity_Nav extends AppCompatActivity implements NavigationVie
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Fragment fragment = new EntryFragment();
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.add(R.id.content_frame, fragment);
-        ft.commit();
+        Fragment fragment = new SagFragment();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, fragment).commit();
+    }
 
+    public void clickRadiusButton(View view){
+        Fragment radiusFragment = new RadiusFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, radiusFragment).commit();
+    }
+
+    public void clickSagButton(View view){
+        Fragment sagFragment = new SagFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, sagFragment).commit();
+    }
+
+    public void clickDiameterButton(View view){
+        Fragment diameterFragment = new DiameterFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, diameterFragment).commit();
     }
 
     @Override
@@ -59,10 +73,10 @@ public class MainActivity_Nav extends AppCompatActivity implements NavigationVie
                 intent = new Intent(this, CenteringActivity_Nav.class);
                 break;
             case R.id.nav_zygo:
-                intent = new Intent(this, ZygoActivity.class);
+                intent = new Intent(this, ZygoActivity_Nav.class);
                 break;
             case R.id.nav_process:
-                intent = new Intent(this, ProcessActivity.class);
+                intent = new Intent(this, ProcessActivity_Nav.class);
                 break;
 
             default:

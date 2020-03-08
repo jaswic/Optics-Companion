@@ -1,4 +1,4 @@
-package com.example.opticscompanion;
+package com.example.opticscompanion.Adapters;
 
 import android.graphics.Color;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.opticscompanion.R;
 
 public class SimpleViewHolder extends RecyclerView.ViewHolder {
     private TextView largeGrayText, smallGrayText, coverage;
