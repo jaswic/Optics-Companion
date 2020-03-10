@@ -37,12 +37,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:entries="@array/shapes"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_weight="7"
             app:layout_constraintStart_toEndOf="@+id/labelShapeSpinner"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar"
-            android:entries="@array/shapes"/>
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
         <View
             android:layout_width="wrap_content"
@@ -83,7 +83,7 @@
             app:layout_constraintTop_toBottomOf="@+id/spinnerLensShape" />
 
         <TextView
-            android:id="@+id/labelUpperDiameter"
+            android:id="@+id/labelUpperRadius"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -108,7 +108,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_weight="7"
-            app:layout_constraintStart_toEndOf="@+id/labelUpperDiameter"
+            app:layout_constraintStart_toEndOf="@+id/labelUpperRadius"
             app:layout_constraintTop_toBottomOf="@+id/upperBellDiameter" />
 
         <View
@@ -180,7 +180,6 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:enabled="false"
             android:hint="@string/hint_lower_bell_diameter"
             android:inputType="number|numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -210,7 +209,6 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:enabled="false"
             android:hint="@string/hint_lower_radius"
             android:inputType="number|numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -246,15 +244,16 @@
             android:text="1.0"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/viewGradientColorBar"
-            app:layout_constraintStart_toStartOf="@+id/viewGradientColorBar"
-            app:layout_constraintEnd_toEndOf="@+id/viewGradientColorBar"/>
-<TextView
+            app:layout_constraintEnd_toEndOf="@+id/viewGradientColorBar"
+            app:layout_constraintStart_toStartOf="@+id/viewGradientColorBar" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1.5"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/viewGradientColorBar"
-            app:layout_constraintEnd_toEndOf="@+id/viewGradientColorBar"/>
+            app:layout_constraintEnd_toEndOf="@+id/viewGradientColorBar" />
 
         <View
             android:id="@+id/viewGradientColorBar"
@@ -273,12 +272,10 @@
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:background="@drawable/baseline_arrow_upward_black_18dp"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintTop_toTopOf="@+id/viewGradientColorBar"
-            app:layout_constraintBottom_toBottomOf="@+id/viewGradientColorBar"
             app:layout_constraintEnd_toEndOf="@+id/viewGradientColorBar"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/viewGradientColorBar"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/viewGradientColorBar" />
 
         <TextView
             android:id="@+id/centeringResultText"
@@ -289,9 +286,9 @@
             app:layout_constraintEnd_toEndOf="@+id/viewGradientColorBar"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/viewGradientColorBar"
-            app:layout_constraintTop_toBottomOf="@+id/viewGradientColorBar" />
+            app:layout_constraintTop_toBottomOf="@+id/centeringArrow" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="match_parent"
