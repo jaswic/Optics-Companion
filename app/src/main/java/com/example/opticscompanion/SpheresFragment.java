@@ -1,4 +1,4 @@
-package com.example.opticscompanion.Fragments;
+package com.example.opticscompanion;
 
 
 import android.os.Bundle;

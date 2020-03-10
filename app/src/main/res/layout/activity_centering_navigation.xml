@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:id="@+id/drawer_layout">
+    android:id="@+id/drawer_layout"
+    tools:context=".Activities.CenteringActivity_Nav">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -40,7 +41,8 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_weight="7"
             app:layout_constraintStart_toEndOf="@+id/labelShapeSpinner"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            android:entries="@array/shapes"/>
 
         <View
             android:layout_width="wrap_content"
@@ -71,6 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:enabled="true"
             android:hint="@string/hint_upper_bell_diameter"
             android:inputType="number|numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -99,6 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:enabled="true"
             android:hint="@string/hint_upper_radius"
             android:inputType="number|numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -137,6 +141,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:enabled="true"
             android:hint="@string/hint_upper_radius"
             android:inputType="number|numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -175,6 +180,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
+            android:enabled="false"
             android:hint="@string/hint_lower_bell_diameter"
             android:inputType="number|numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -204,6 +210,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
+            android:enabled="false"
             android:hint="@string/hint_lower_radius"
             android:inputType="number|numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -219,6 +226,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:onClick="onClickCenterButton"
             android:text="@string/button_text_calculate_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
