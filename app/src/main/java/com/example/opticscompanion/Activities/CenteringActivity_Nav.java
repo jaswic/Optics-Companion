@@ -11,10 +11,10 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -24,9 +24,6 @@ import com.example.opticscompanion.Fragments.EntryFragment;
 import com.example.opticscompanion.R;
 import com.example.opticscompanion.Utils.Center;
 import com.google.android.material.navigation.NavigationView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class CenteringActivity_Nav extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemSelectedListener {
     private int shape=0;
@@ -138,6 +135,9 @@ public class CenteringActivity_Nav extends AppCompatActivity implements Navigati
                 lowerRadiusText.setEnabled(false);
                 lowerRadius = 999999;
                 lowerBellDiameter = 1.0;
+                Log.v("Setting lens shape","Enabled upper. Disabled Lower");
+                Log.v("Setting lens shape","Lower radius: " + Double.toString(lowerRadius));
+
                 break;
             case 1: //plano - convex
             case 3:
@@ -147,7 +147,14 @@ public class CenteringActivity_Nav extends AppCompatActivity implements Navigati
                 lowerRadiusText.setEnabled(true);
                 upperRadius = 999999;
                 upperBellDiameter = 1.0;
+                Log.v("Setting lens shape","Enabled lower. Disabled upper");
                 break;
+            default:
+                upperRadiusText.setEnabled(true);
+                upperBellText.setEnabled(true);
+                lowerBellText.setEnabled(true);
+                lowerRadiusText.setEnabled(true);
+                Log.v("Setting lens shape","Enabled all");
         }
     }
 
@@ -161,7 +168,7 @@ public class CenteringActivity_Nav extends AppCompatActivity implements Navigati
         toast.show();
 
 
-        //Get view IDs
+        //Get view IDs and values
         EditText upperRadiusText = findViewById(R.id.upperRadiusEditText);
         upperRadius = Double.parseDouble(upperRadiusText.getText().toString());
 
@@ -182,20 +189,20 @@ public class CenteringActivity_Nav extends AppCompatActivity implements Navigati
         centeringValue = lens.calculateCentering();
 
         //Setup views to display results
+        View centeringArrow = findViewById(R.id.centeringArrow);
         TextView centeringResultText = findViewById(R.id.centeringResultText);
         centeringResultText.setText(String.format("%.3f",centeringValue));
         centeringResultText.setVisibility(View.VISIBLE);
-
-        if (centeringValue>0.0 && centeringValue <1.0) {
-            ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) centeringResultText.getLayoutParams();
-            params.horizontalBias = (float) (centeringValue * 0.5);
-            centeringResultText.setLayoutParams(params);
+        centeringArrow.setVisibility(View.VISIBLE);
+        ConstraintLayout.LayoutParams textParams = (ConstraintLayout.LayoutParams) centeringResultText.getLayoutParams();
+        if (centeringValue>0.5 && centeringValue <1.0) {
+            textParams.horizontalBias = (float) (centeringValue * 0.5);
+        } else if (centeringValue >= 1.0 && centeringValue <=1.5){
+            textParams.horizontalBias = (float) (centeringValue-0.5);
         } else {
-            ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) centeringResultText.getLayoutParams();
-            params.horizontalBias = (float) (3.0 - centeringValue);
-            centeringResultText.setLayoutParams(params);
+            textParams.horizontalBias = (float) 1;
         }
-
-
+        centeringResultText.setLayoutParams(textParams);
+        centeringArrow.setLayoutParams(textParams);
     }
 }

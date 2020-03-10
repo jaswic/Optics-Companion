@@ -235,7 +235,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0.0"
+            android:text="0.5"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/viewGradientColorBar"
             app:layout_constraintStart_toStartOf="@+id/viewGradientColorBar" />
@@ -247,6 +247,13 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/viewGradientColorBar"
             app:layout_constraintStart_toStartOf="@+id/viewGradientColorBar"
+            app:layout_constraintEnd_toEndOf="@+id/viewGradientColorBar"/>
+<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.5"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/viewGradientColorBar"
             app:layout_constraintEnd_toEndOf="@+id/viewGradientColorBar"/>
 
         <View
@@ -267,10 +274,11 @@
             android:layout_height="18dp"
             android:background="@drawable/baseline_arrow_upward_black_18dp"
             app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toTopOf="@+id/viewGradientColorBar"
             app:layout_constraintBottom_toBottomOf="@+id/viewGradientColorBar"
             app:layout_constraintEnd_toEndOf="@+id/viewGradientColorBar"
             app:layout_constraintStart_toStartOf="@+id/viewGradientColorBar"
-            app:layout_constraintTop_toTopOf="@+id/viewGradientColorBar" />
+            />
 
         <TextView
             android:id="@+id/centeringResultText"
