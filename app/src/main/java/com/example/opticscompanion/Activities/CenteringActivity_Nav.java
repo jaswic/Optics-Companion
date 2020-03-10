@@ -129,22 +129,26 @@ public class CenteringActivity_Nav extends AppCompatActivity implements Navigati
         Toast toast = Toast.makeText(this, "ID: " + Long.toString(id), Toast.LENGTH_SHORT);
         toast.show();
 
-        /*switch ((int)id) {
+        switch ((int)id) {
             case 0: //convex - plano
             case 2:
+                upperRadiusText.setEnabled(true);
+                upperBellText.setEnabled(true);
                 lowerBellText.setEnabled(false);
                 lowerRadiusText.setEnabled(false);
                 lowerRadius = 999999;
-                lowerBellDiameter = 0;
+                lowerBellDiameter = 1.0;
                 break;
             case 1: //plano - convex
-            case 4:
+            case 3:
                 upperRadiusText.setEnabled(false);
                 upperBellText.setEnabled(false);
+                lowerBellText.setEnabled(true);
+                lowerRadiusText.setEnabled(true);
                 upperRadius = 999999;
-                upperBellDiameter = 0.0;
+                upperBellDiameter = 1.0;
                 break;
-        }*/
+        }
     }
 
     @Override
