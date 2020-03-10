@@ -1,10 +1,14 @@
-package com.example.opticscompanion;
+package com.example.opticscompanion.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.opticscompanion.Fragments.CuttingSpeedFragment;
+import com.example.opticscompanion.Fragments.RpmFragment;
+import com.example.opticscompanion.R;
 
 public class ProcessActivity extends AppCompatActivity {
 

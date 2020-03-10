@@ -1,12 +1,10 @@
-package com.example.opticscompanion;
+package com.example.opticscompanion.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
-
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -15,17 +13,20 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.opticscompanion.Fragments.CuttingSpeedFragment;
+import com.example.opticscompanion.Fragments.EntryFragment;
+import com.example.opticscompanion.R;
+import com.example.opticscompanion.Fragments.RpmFragment;
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity_Nav extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class ProcessActivity_Nav extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_navigation);
+        setContentView(R.layout.activity_process_navigation);
 
-
-        Toolbar toolbar = findViewById(R.id.toobar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         //Add drawer menu icon and drawer toggle to appbar
@@ -38,11 +39,23 @@ public class MainActivity_Nav extends AppCompatActivity implements NavigationVie
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Fragment fragment = new EntryFragment();
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.add(R.id.content_frame, fragment);
-        ft.commit();
+        //Set first fragment to display
+        Fragment fragment = new RpmFragment();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, fragment).commit();
+    }
 
+    public void clickDiameterButton(View view){
+
+    }
+
+    public void clickCuttingSpeedButton(View view){
+        Fragment fragment = new CuttingSpeedFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+    }
+
+    public void clickRpmButton(View view){
+        Fragment fragment = new RpmFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
     }
 
     @Override
@@ -56,13 +69,13 @@ public class MainActivity_Nav extends AppCompatActivity implements NavigationVie
                 intent = new Intent(this, LensActivity_Nav.class);
                 break;
             case R.id.nav_centering:
-                fragment = new CenteringFragment();
+                intent = new Intent(this, CenteringActivity_Nav.class);
                 break;
             case R.id.nav_zygo:
-                intent = new Intent(this, ZygoActivity.class);
+                intent = new Intent(this, ZygoActivity_Nav.class);
                 break;
             case R.id.nav_process:
-                intent = new Intent(this, ProcessActivity.class);
+                intent = new Intent(this, ProcessActivity_Nav.class);
                 break;
 
             default:

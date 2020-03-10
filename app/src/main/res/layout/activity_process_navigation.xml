@@ -10,59 +10,57 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:importantForAutofill="noExcludeDescendants"
-        tools:context="com.example.opticscompanion.Activities.LensActivity">
+        android:importantForAutofill="noExcludeDescendants">
 
         <include
             android:id="@+id/toolbar"
             layout="@layout/toolbar_main" />
 
         <Button
-            android:id="@+id/sagButton"
+            android:id="@+id/speedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="clickSagButton"
-            android:text="@string/button_text_sag_button"
-            app:layout_constraintBaseline_toBaselineOf="@+id/radiusButton"
-            app:layout_constraintEnd_toStartOf="@+id/radiusButton"
+            android:layout_marginTop="16dp"
+            android:onClick="clickCuttingSpeedButton"
+            android:text="@string/button_text_speed_button"
+            app:layout_constraintEnd_toStartOf="@+id/minDiameterButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/rpmButton"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+        <Button
+            android:id="@+id/rpmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:onClick="clickRpmButton"
+            android:text="@string/button_text_rpm_button"
+            app:layout_constraintBaseline_toBaselineOf="@+id/speedButton"
+            app:layout_constraintEnd_toStartOf="@+id/speedButton"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/radiusButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:onClick="clickRadiusButton"
-            android:text="@string/button_text_radius_button"
-            app:layout_constraintEnd_toStartOf="@+id/diameterButton"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/sagButton"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
-        <Button
-            android:id="@+id/diameterButton"
+            android:id="@+id/minDiameterButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="clickDiameterButton"
-            android:text="@string/button_text_diameter_button"
-            app:layout_constraintBaseline_toBaselineOf="@+id/radiusButton"
+            android:text="@string/button_text_tool_diameter_button"
+            app:layout_constraintBaseline_toBaselineOf="@+id/speedButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/radiusButton" />
+            app:layout_constraintStart_toEndOf="@+id/speedButton" />
 
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radiusButton">
+            app:layout_constraintTop_toBottomOf="@+id/speedButton">
 
         </FrameLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView

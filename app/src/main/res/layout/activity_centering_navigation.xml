@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".Activities.CenteringActivity_Nav">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.CenteringActivity_Nav">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_main" />
+
+        <TextView
+            android:id="@+id/labelShapeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="right"
+            android:text="@string/label_lens_shape_spinner"
+            app:layout_constraintEnd_toStartOf="@+id/spinnerLensShape"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/spinnerLensShape" />
+
+        <Spinner
+            android:id="@+id/spinnerLensShape"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintStart_toEndOf="@+id/labelShapeSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            android:entries="@array/shapes"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorSurface"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerLensShape" />
+
+        <TextView
+            android:id="@+id/labelUpperBell"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="right"
+            android:text="@string/label_upper_bell_diameter"
+            app:layout_constraintBaseline_toBaselineOf="@+id/upperBellDiameter"
+            app:layout_constraintEnd_toStartOf="@+id/upperBellDiameter"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/upperBellDiameter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:enabled="true"
+            android:hint="@string/hint_upper_bell_diameter"
+            android:inputType="number|numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintStart_toEndOf="@+id/labelUpperBell"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerLensShape" />
+
+        <TextView
+            android:id="@+id/labelUpperDiameter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="right"
+            android:text="@string/label_upper_radius"
+            app:layout_constraintBaseline_toBaselineOf="@+id/upperRadiusEditText"
+            app:layout_constraintEnd_toStartOf="@+id/upperRadiusEditText"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/upperRadiusEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:enabled="true"
+            android:hint="@string/hint_upper_radius"
+            android:inputType="number|numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintStart_toEndOf="@+id/labelUpperDiameter"
+            app:layout_constraintTop_toBottomOf="@+id/upperBellDiameter" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorSurface"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upperRadiusEditText" />
+
+        <TextView
+            android:id="@+id/labelCenterThickness"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="right"
+            android:text="@string/label_ct"
+            app:layout_constraintBaseline_toBaselineOf="@+id/centerThicknessEditText"
+            app:layout_constraintEnd_toStartOf="@+id/centerThicknessEditText"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/centerThicknessEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:enabled="true"
+            android:hint="@string/hint_upper_radius"
+            android:inputType="number|numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintStart_toEndOf="@+id/labelCenterThickness"
+            app:layout_constraintTop_toBottomOf="@+id/upperRadiusEditText" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorSurface"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/centerThicknessEditText" />
+
+        <TextView
+            android:id="@+id/labelLowerBell"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="right"
+            android:text="@string/label_lower_bell_diameter"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lowerBellDiameter"
+            app:layout_constraintEnd_toStartOf="@+id/lowerBellDiameter"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/lowerBellDiameter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="@string/hint_lower_bell_diameter"
+            android:inputType="number|numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintStart_toEndOf="@+id/labelLowerBell"
+            app:layout_constraintTop_toBottomOf="@+id/centerThicknessEditText" />
+
+        <TextView
+            android:id="@+id/labelLowerRadius"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="right"
+            android:text="@string/label_lower_radius"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lowerRadiusEditText"
+            app:layout_constraintEnd_toStartOf="@+id/lowerRadiusEditText"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/lowerRadiusEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="@string/hint_lower_radius"
+            android:inputType="number|numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintStart_toEndOf="@+id/labelLowerRadius"
+            app:layout_constraintTop_toBottomOf="@+id/lowerBellDiameter" />
+
+        <Button
+            android:id="@+id/buttonCalculateCentering"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="onClickCenterButton"
+            android:text="@string/button_text_calculate_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lowerRadiusEditText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/viewGradientColorBar"
+            app:layout_constraintStart_toStartOf="@+id/viewGradientColorBar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.0"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/viewGradientColorBar"
+            app:layout_constraintStart_toStartOf="@+id/viewGradientColorBar"
+            app:layout_constraintEnd_toEndOf="@+id/viewGradientColorBar"/>
+
+        <View
+            android:id="@+id/viewGradientColorBar"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/gradient_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonCalculateCentering" />
+
+        <View
+            android:id="@+id/centeringArrow"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/baseline_arrow_upward_black_18dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toBottomOf="@+id/viewGradientColorBar"
+            app:layout_constraintEnd_toEndOf="@+id/viewGradientColorBar"
+            app:layout_constraintStart_toStartOf="@+id/viewGradientColorBar"
+            app:layout_constraintTop_toTopOf="@+id/viewGradientColorBar" />
+
+        <TextView
+            android:id="@+id/centeringResultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/viewGradientColorBar"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/viewGradientColorBar"
+            app:layout_constraintTop_toBottomOf="@+id/viewGradientColorBar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        app:menu="@menu/menu_nav" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

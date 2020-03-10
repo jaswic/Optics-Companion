@@ -1,4 +1,4 @@
-package com.example.opticscompanion;
+package com.example.opticscompanion.Fragments;
 
 
 import android.os.Bundle;
@@ -13,6 +13,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.opticscompanion.Utils.Lens;
+import com.example.opticscompanion.R;
 
 public class SagFragment extends Fragment {
 

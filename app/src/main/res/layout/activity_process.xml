@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:importantForAutofill="noExcludeDescendants"
-    tools:context="com.example.opticscompanion.ProcessActivity">
+    tools:context="com.example.opticscompanion.Activities.ProcessActivity">
 
     <Button
         style="@style/ButtonTheme"

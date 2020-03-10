@@ -4,62 +4,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:importantForAutofill="noExcludeDescendants"
-    tools:context="com.example.opticscompanion.CuttingSpeedFragment">
+    android:padding="16dp"
+    tools:context="com.example.opticscompanion.Fragments.CuttingSpeedFragment">
 
 
     <TextView
         android:id="@+id/operandLabel1"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:gravity="right"
         android:text="@string/string_tool_diameter"
         app:layout_constraintBaseline_toBaselineOf="@+id/operandValue1"
         app:layout_constraintEnd_toStartOf="@+id/operandValue1"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="3"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/operandValue1"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="@string/hint_enter_tool_diameter"
         android:inputType="number|numberDecimal"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="7"
         app:layout_constraintStart_toEndOf="@+id/operandLabel1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/operandLabel2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:gravity="right"
         android:text="@string/label_rpm"
         app:layout_constraintBaseline_toBaselineOf="@+id/operandValue2"
         app:layout_constraintEnd_toStartOf="@+id/operandValue2"
-        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="3"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/operandValue2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/hint_enter_tool_rpm"
         android:inputType="number|numberDecimal"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="7"
         app:layout_constraintStart_toEndOf="@+id/operandLabel2"
         app:layout_constraintTop_toBottomOf="@+id/operandValue1" />
 
     <Button
         android:id="@+id/calculateButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/button_text_calculate_button"
@@ -74,23 +80,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="@string/label_cutting_speed"
+        android:text="@string/label_result_cutting_speed"
         android:visibility="invisible"
         app:layout_constraintBaseline_toBaselineOf="@+id/resultValue"
-        app:layout_constraintEnd_toStartOf="@+id/resultValue"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/resultValue" />
 
     <TextView
         android:id="@+id/resultValue"
         style="@style/resultText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/resultLabel"
         app:layout_constraintTop_toBottomOf="@+id/calculateButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
