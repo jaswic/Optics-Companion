@@ -3,7 +3,7 @@ package com.example.opticscompanion.Utils;
 
 
 public class Center {
-    private static final double MU=0.13;
+    private static final double MU=0.14;
 
     private double diameterUpperBell;
     private double diameterLowerBell;
